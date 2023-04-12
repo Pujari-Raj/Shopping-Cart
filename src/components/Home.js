@@ -9,6 +9,7 @@ const Home = () => {
     console.log(products);
   return (
     <div className='home'>
+        {/* Creating flex-container */}
         <Filters/>
         <div className='productContainer'>
             {products.map((prod) => {

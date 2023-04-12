@@ -4,12 +4,12 @@ import  {faker} from '@faker-js/faker';
 import { cartReducer } from './Reducer';
 
 const Cart = createContext();
-// faker.seed(99);
+faker.seed(99);
 
 const Context = ({children}) => {
 
     /*Craeting Array of 20 products and taking the values from faker API*/
-    const products = [...Array(20)].map(() => ({
+    const products = [...Array(21)].map(() => ({
         id: faker.datatype.uuid(), //  for productid
         name: faker.commerce.productName(), // for productname
         price: faker.commerce.price(), // for product-price
@@ -29,6 +29,7 @@ const Context = ({children}) => {
 }
 
 export default Context;
+
 export const CartState = () => {
     return useContext(Cart);
 }
