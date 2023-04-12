@@ -4,6 +4,7 @@ import  {faker} from '@faker-js/faker';
 import { cartReducer } from './Reducer';
 
 const Cart = createContext();
+// faker.seed(99);
 
 const Context = ({children}) => {
 
@@ -13,7 +14,7 @@ const Context = ({children}) => {
         name: faker.commerce.productName(), // for productname
         price: faker.commerce.price(), // for product-price
         image: faker.image.abstract(), // for product-image
-        inStock: faker.random.numeric(), // for product-availability
+        inStock: faker.random.numeric({'min': 1, 'max': 5}), // for product-availability
         fastDelivery: faker.datatype.boolean(), // is product-fastDelivery
         ratings: faker.datatype.number({'min': 1, 'max': 5}) // product ratings(1-5)
     }));
