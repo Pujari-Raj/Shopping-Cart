@@ -10,4 +10,5 @@ Learnings from this projects:-
 * What is React-Router and How to use it.
 * How to Use React-Bootstrap.
 * What is react-redux, context api
+* How to Use react-redux 
 * How to add filters for different condition (Price, Ratings)
