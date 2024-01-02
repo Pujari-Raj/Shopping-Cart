@@ -9,7 +9,7 @@ faker.seed(99);
 const Context = ({children}) => {
 
     /*Craeting Array of 20 products and taking the values from faker API*/
-    const products = [...Array(21)].map(() => ({
+    const products = [...Array(50)].map(() => ({
         id: faker.datatype.uuid(), //  for productid
         name: faker.commerce.productName(), // for productname
         price: faker.commerce.price(), // for product-price
